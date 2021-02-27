@@ -125,7 +125,8 @@ class Textnow:
       if cookies:
         driver.delete_all_cookies()
         for cookie in cookies:
-          del cookie['expiry']
+          if 'expiry' in cookie:
+            del cookie['expiry']
           driver.add_cookie(cookie)
         #检测是否登录成功
         success = self.check_cookie(driver)
