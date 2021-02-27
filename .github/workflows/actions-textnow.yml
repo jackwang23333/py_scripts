@@ -53,8 +53,8 @@ jobs:
       uses: actions/cache@v2
       with:
         path: ~/cache.tgz
-        key: ${{ github.repository_owner }}_${{ github.workflow }}_tn
-        restore-keys: ${{ github.repository_owner }}_${{ github.workflow }}_
+        key: ${{ github.repository_owner }}_${{ github.run_id }}
+        restore-keys: ${{ github.repository_owner }}_
         
     # TextNow保号任务
     - name: TextNow protect number
