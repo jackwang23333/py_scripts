@@ -12,6 +12,7 @@ import urllib3
 from dns.qCloud import QcloudApi
 from dns.aliyun import AliApi
 from dns.dnspod import DnspodApi
+from dns.hwcloud import HWCloudApi
 from log import Logger
 import traceback
 import os
@@ -104,6 +105,8 @@ def getDnsApi(dns):
     return AliApi()
   elif dns == "dnspod":
     return DnspodApi()
+  elif dns == "hwCloud":
+    return HWCloudApi()
   return None
 
 def main():
