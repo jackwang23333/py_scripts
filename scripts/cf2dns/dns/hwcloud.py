@@ -9,12 +9,14 @@
 
 import json
 import requests
-import signer
+import os,sys
+sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+import hwsigner as signer
 
 
 # 所有函数请求成功会返回success或相关数据，失败则会返回接口返回的原始数据
 # 所有参数值均限定数据类型
-class Hwcloud:
+class HWCloudApi:
     # 定义AK，SK，实例化鉴权SDK
     # AK SK生成: https://support.huaweicloud.com/devg-apisign/api-sign-provide-aksk.html
     def __init__(self):
