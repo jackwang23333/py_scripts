@@ -27,7 +27,7 @@ print(u"共有 %s 个账号，即将开始保号处理" % len(cookies))
 
 numbers = os.environ["TEXTNOW_NUMBER"]
 #msg = os.environ["TEXTNOW_MSG"]
-msg = "现在的北京时间是:"+local_time+" random code:"+str(random.randint(100000,999999))
+msg = "现在的北京时间是:"+print (local_time)+" random code:"+str(random.randint(100000,999999))
 for idx in range(0,len(usernames)):
   username = usernames[idx]
   password = passwords[idx]
