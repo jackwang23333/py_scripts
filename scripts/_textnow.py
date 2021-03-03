@@ -10,7 +10,7 @@ cookies = os.environ["TEXTNOW_COOKIES"].split('##,##')
 
 
 import datetime
-utc = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+utc = time.strftime("%Y-%m-%d %H:%M:%S")
 UTC_FORMAT = "%Y-%m-%d %H:%M:%S"
 utc_time = datetime.datetime.strptime(utc, UTC_FORMAT)
 local_time = utc_time + datetime.timedelta(hours=8)
@@ -27,7 +27,7 @@ print(u"共有 %s 个账号，即将开始保号处理" % len(cookies))
 
 numbers = os.environ["TEXTNOW_NUMBER"]
 #msg = os.environ["TEXTNOW_MSG"]
-msg = print(local_time)
+msg = "当前北京时间"+local_time
 for idx in range(0,len(usernames)):
   username = usernames[idx]
   password = passwords[idx]
