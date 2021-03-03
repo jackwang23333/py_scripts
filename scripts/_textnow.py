@@ -24,7 +24,7 @@ print(u"共有 %s 个账号，即将开始保号处理" % len(cookies))
 
 numbers = os.environ["TEXTNOW_NUMBER"]
 #msg = os.environ["TEXTNOW_MSG"]
-msg ='当前UTC时间:'+print time.strftime("%Y-%m-%d %H:%M:%S")
+msg ='当前UTC时间:'+str(print time.strftime("%Y-%m-%d %H:%M:%S"))
 for idx in range(0,len(usernames)):
   username = usernames[idx]
   password = passwords[idx]
