@@ -2,7 +2,7 @@
 
 from textnow import textnow_sms
 import os
-
+import random
 usernames = os.environ["TEXTNOW_USERNAME"].split(',')
 passwords = os.environ["TEXTNOW_PASSWORD"].split(',')
 cookies = os.environ["TEXTNOW_COOKIES"].split('##,##')
@@ -19,7 +19,8 @@ else:
 print(u"共有 %s 个账号，即将开始保号处理" % len(cookies))
 
 numbers = os.environ["TEXTNOW_NUMBER"]
-msg = os.environ["TEXTNOW_MSG"]
+#msg = os.environ["TEXTNOW_MSG"]
+msg = 'code:'+str(random.randint(100000,999999))
 for idx in range(0,len(usernames)):
   username = usernames[idx]
   password = passwords[idx]
